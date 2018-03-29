@@ -58,7 +58,6 @@ Nick::Audio::Resample - Wrapper for libsamplerate (AKA Secret Rabbit Code).
         'buffer_in'     => \$buff_out
     );
 
-    my $got;
     while ( $flac -> read() ) {
         $resample -> process()
             and $pulse -> play();

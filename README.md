@@ -49,7 +49,6 @@ Currently limited to 16 bit audio.
         'buffer_in'     => \$buff_out
     );
 
-    my $got;
     while ( $flac -> read() ) {
         $resample -> process()
             and $pulse -> play();
