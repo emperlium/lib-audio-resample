@@ -98,7 +98,7 @@ The following are optional.
 
 ### process()
 
-Raeds PCM audio from **buffer\_in** and possibly writes resampled audio to **buffer\_out**, returning number of bytes of PCM written to buffer\_out.
+Reads PCM audio from **buffer\_in** and possibly writes resampled audio to **buffer\_out**, returning number of bytes of PCM written to buffer\_out.
 
 If the optional argument is 1, any buffers will be flushed.
 

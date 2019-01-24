@@ -115,10 +115,9 @@ default: B<0>
 
 =head2 process()
 
-Raeds PCM audio from B<buffer_in> and possibly writes resampled audio to B<buffer_out>, returning number of bytes of PCM written to buffer_out.
+Reads PCM audio from B<buffer_in> and possibly writes resampled audio to B<buffer_out>, returning number of bytes of PCM written to buffer_out.
 
 If the optional argument is 1, any buffers will be flushed.
-
 
 =head2 get_buffer_in_ref()
 
