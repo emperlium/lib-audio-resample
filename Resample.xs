@@ -45,7 +45,7 @@ NICKAUDIORESAMPLE::new_xs( rate_in, rate_out, channels, converter, scalar_in, sc
             ) == NULL
         ) {
             croak(
-                "Converter init failed: %04s",
+                "Converter init failed: %s",
                 src_strerror( error )
             );
         }
@@ -124,7 +124,7 @@ NICKAUDIORESAMPLE::process( flush = false )
                 len_out + len_in > IN_BUFFER_SIZE
             ) {
                 croak(
-                    "Too much data (%d) for maximum buffer size (%d)",
+                    "Too much data (%lu) for maximum buffer size (%d)",
                     len_out + len_in,
                     IN_BUFFER_SIZE
                 );
@@ -158,7 +158,7 @@ NICKAUDIORESAMPLE::process( flush = false )
                 )
             )) {
                 croak(
-                    "Converter error: %04s",
+                    "Converter error: %s",
                     src_strerror( error )
                 );
             }
